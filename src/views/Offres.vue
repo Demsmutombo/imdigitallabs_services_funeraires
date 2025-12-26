@@ -40,6 +40,9 @@
                     <li>✅ Mise en ligne incluse</li>
                   </ul>
                   <div class="offre-footer">
+                    <a href="https://offres-essentiel.vercel.app/" target="_blank" class="btn btn-example mb-2">
+                      <i class="bi bi-eye me-2"></i>Voir l'exemple de site
+                    </a>
                     <button @click="toggleForm('essentiel')" class="btn btn-primary">
                       {{ activeForm === 'essentiel' ? 'Masquer le formulaire' : 'Remplir le formulaire' }}
                     </button>
@@ -70,6 +73,9 @@
                     <li>✅ Icône du site (favicon)</li>
                   </ul>
                   <div class="offre-footer">
+                    <a href="https://offre-standard.vercel.app/" target="_blank" class="btn btn-example mb-2">
+                      <i class="bi bi-eye me-2"></i>Voir l'exemple de site
+                    </a>
                     <button @click="toggleForm('standard')" class="btn btn-primary">
                       {{ activeForm === 'standard' ? 'Masquer le formulaire' : 'Remplir le formulaire' }}
                     </button>
@@ -102,6 +108,9 @@
                     <li>✅ Support & modifications pendant 1 mois</li>
                   </ul>
                   <div class="offre-footer">
+                    <a href="https://offre-premium.vercel.app/" target="_blank" class="btn btn-example mb-2">
+                      <i class="bi bi-eye me-2"></i>Voir l'exemple de site
+                    </a>
                     <button @click="toggleForm('premium')" class="btn btn-primary">
                       {{ activeForm === 'premium' ? 'Masquer le formulaire' : 'Remplir le formulaire' }}
                     </button>
@@ -402,6 +411,36 @@ export default {
   text-align: center;
   padding-top: 20px;
   border-top: 2px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-example {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-example:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 44, 44, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-example i {
+  font-size: 1.1rem;
 }
 
 .btn {
