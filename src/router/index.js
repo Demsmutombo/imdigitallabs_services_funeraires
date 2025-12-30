@@ -4,6 +4,7 @@ import Offres from '../views/Offres.vue'
 import Temoignage from '../views/Temoignage.vue'
 import QuestionnaireEssentiel from '../views/QuestionnaireEssentiel.vue'
 import Questionnaires from '../views/Questionnaires.vue'
+import Templates from '../views/Templates.vue'
 
 const routes = [
   {
@@ -30,6 +31,12 @@ const routes = [
     path: '/questionnaire-essentiel',
     name: 'QuestionnaireEssentiel',
     component: QuestionnaireEssentiel
+  },
+  {
+    path: '/templates/:type?',
+    name: 'Templates',
+    component: Templates,
+    props: true
   }
 ]
 

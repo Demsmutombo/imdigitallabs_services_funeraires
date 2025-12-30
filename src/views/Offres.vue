@@ -40,9 +40,9 @@
                     <li>✅ Mise en ligne incluse</li>
                   </ul>
                   <div class="offre-footer">
-                    <a href="https://offres-essentiel.vercel.app/" target="_blank" class="btn btn-example mb-2">
-                      <i class="bi bi-eye me-2"></i>Voir l'exemple de site
-                    </a>
+                    <router-link to="/templates/essentiel" class="btn btn-example mb-2">
+                      <i class="bi bi-eye me-2"></i>Voir le site
+                    </router-link>
                     <button @click="toggleForm('essentiel')" class="btn btn-primary">
                       {{ activeForm === 'essentiel' ? 'Masquer le formulaire' : 'Remplir le formulaire' }}
                     </button>
@@ -73,9 +73,9 @@
                     <li>✅ Icône du site (favicon)</li>
                   </ul>
                   <div class="offre-footer">
-                    <a href="https://offre-standard.vercel.app/" target="_blank" class="btn btn-example mb-2">
-                      <i class="bi bi-eye me-2"></i>Voir l'exemple de site
-                    </a>
+                    <router-link to="/templates/standard" class="btn btn-example mb-2">
+                      <i class="bi bi-eye me-2"></i>Voir le site
+                    </router-link>
                     <button @click="toggleForm('standard')" class="btn btn-primary">
                       {{ activeForm === 'standard' ? 'Masquer le formulaire' : 'Remplir le formulaire' }}
                     </button>
@@ -108,9 +108,9 @@
                     <li>✅ Support & modifications pendant 1 mois</li>
                   </ul>
                   <div class="offre-footer">
-                    <a href="https://offre-premium.vercel.app/" target="_blank" class="btn btn-example mb-2">
-                      <i class="bi bi-eye me-2"></i>Voir l'exemple de site
-                    </a>
+                    <router-link to="/templates/premium" class="btn btn-example mb-2">
+                      <i class="bi bi-eye me-2"></i>Voir le site
+                    </router-link>
                     <button @click="toggleForm('premium')" class="btn btn-primary">
                       {{ activeForm === 'premium' ? 'Masquer le formulaire' : 'Remplir le formulaire' }}
                     </button>
