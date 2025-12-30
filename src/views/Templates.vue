@@ -108,7 +108,7 @@
               <div class="template-card featured">
                 <div class="badge-featured-top">⭐ La plus demandée</div>
                 <div class="template-image-wrapper">
-                  <img :src="template.image" :alt="`Template Standard ${index + 1}`" class="template-image">
+                  <img :src="getImageUrl(template.image)" :alt="`Template Standard ${index + 1}`" class="template-image">
                   <div class="template-overlay">
                     <a :href="template.externalUrl" target="_blank" class="btn btn-view">
                       <i class="bi bi-eye me-2"></i>Voir le site
@@ -142,7 +142,7 @@
               :data-aos-delay="100 + (index * 100)">
               <div class="template-card premium">
                 <div class="template-image-wrapper">
-                  <img :src="template.image" :alt="`Template Premium ${index + 1}`" class="template-image">
+                  <img :src="getImageUrl(template.image)" :alt="`Template Premium ${index + 1}`" class="template-image">
                   <div class="template-overlay">
                     <a :href="template.externalUrl" target="_blank" class="btn btn-view">
                       <i class="bi bi-eye me-2"></i>Voir le site
@@ -357,11 +357,23 @@ export default {
     getImageUrl(imagePath) {
       // Encoder les espaces et caractères spéciaux dans les noms de fichiers pour Vercel
       if (!imagePath) return ''
-      // Remplacer les espaces par %20 et encoder les parenthèses
-      const parts = imagePath.split('/')
+      
+      // Normaliser le chemin : s'assurer qu'il commence par /
+      let path = imagePath.startsWith('/') ? imagePath : '/' + imagePath
+      
+      // Séparer le chemin et le nom de fichier
+      const parts = path.split('/').filter(part => part !== '')
+      if (parts.length === 0) return ''
+      
       const filename = parts[parts.length - 1]
-      const encodedFilename = encodeURIComponent(filename).replace(/'/g, '%27')
-      return parts.slice(0, -1).join('/') + '/' + encodedFilename
+      const directory = '/' + parts.slice(0, -1).join('/')
+      
+      // Encoder uniquement le nom de fichier (pas le chemin)
+      // Cela permet de gérer les espaces, parenthèses et autres caractères spéciaux
+      const encodedFilename = encodeURIComponent(filename)
+      
+      // Reconstruire le chemin avec le nom de fichier encodé
+      return directory + '/' + encodedFilename
     },
     showNotification(message) {
       // Créer une notification simple
