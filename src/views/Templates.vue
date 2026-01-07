@@ -62,6 +62,37 @@
             <p>Chaque template est conçu avec soin pour honorer la mémoire de vos proches</p>
           </div>
 
+          <!-- Note explicative -->
+          <div class="info-note" data-aos="fade-up" data-aos-delay="50">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="info-content">
+                <h4>📋 Comment ça se passe ?</h4>
+                <p>
+                  Choisissez votre template ci-dessous et cliquez sur « Choisir ce template » pour nous contacter via WhatsApp.
+                </p>
+                <p>
+                  Nous échangeons avec vous afin de bien comprendre vos besoins et vous transmettre les instructions de paiement.
+                </p>
+                <p>
+                  Après confirmation du paiement, nous vous envoyons immédiatement un lien vers un formulaire Google personnalisé.
+                </p>
+                <p>
+                  Vous remplissez le formulaire à votre rythme, en toute tranquillité, avec toutes les informations nécessaires.
+                </p>
+                <p>
+                  Nous réalisons votre site mémorial selon le template choisi et les informations fournies.
+                </p>
+                <p class="info-highlight">
+                  <i class="bi bi-envelope-check me-2"></i>
+                  <strong>📩 Le formulaire vous sera envoyé par e-mail ou WhatsApp après validation du paiement.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div class="row gy-4">
             <!-- Templates Essentiel -->
             <div 
@@ -749,6 +780,88 @@ export default {
   }
 }
 
+.info-note {
+  margin-bottom: 40px;
+}
+
+.info-card {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  border: 2px solid var(--accent-color, #d4af37);
+  border-left: 6px solid var(--accent-color, #d4af37);
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  gap: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.info-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-color, #d4af37) 0%, #c19d2e 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.info-icon i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-content p {
+  margin: 0 0 15px 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.info-content p:last-child {
+  margin-bottom: 0;
+}
+
+.info-content strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.info-highlight {
+  background: rgba(212, 175, 55, 0.1);
+  padding: 15px 20px;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-color, #d4af37);
+  margin-top: 20px !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-highlight i {
+  font-size: 1.2rem;
+  color: var(--accent-color, #d4af37);
+}
+
+.info-highlight strong {
+  color: var(--accent-color, #d4af37);
+}
+
 @media (max-width: 768px) {
   .hero-section h1 {
     font-size: 2rem;
@@ -772,6 +885,36 @@ export default {
   
   .template-image-wrapper {
     height: 250px;
+  }
+
+  .info-card {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .info-icon {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+  }
+
+  .info-icon i {
+    font-size: 1.5rem;
+  }
+
+  .info-content {
+    text-align: center;
+  }
+
+  .info-content h4 {
+    font-size: 1.1rem;
+    justify-content: center;
+  }
+
+  .info-highlight {
+    flex-direction: column;
+    text-align: center;
   }
 }
 </style>

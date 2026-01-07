@@ -40,12 +40,9 @@
                     <li>✅ Mise en ligne incluse</li>
                   </ul>
                   <div class="offre-footer">
-                    <router-link to="/templates/essentiel" class="btn btn-example mb-2">
-                      <i class="bi bi-eye me-2"></i>Voir le site
+                    <router-link to="/templates/essentiel" class="btn btn-primary">
+                      <i class="bi bi-eye me-2"></i>Voir les templates
                     </router-link>
-                    <button @click="toggleForm('essentiel')" class="btn btn-primary">
-                      {{ activeForm === 'essentiel' ? 'Masquer le formulaire' : 'Remplir le formulaire' }}
-                    </button>
                   </div>
                 </div>
               </div>
@@ -73,12 +70,9 @@
                     <li>✅ Icône du site (favicon)</li>
                   </ul>
                   <div class="offre-footer">
-                    <router-link to="/templates/standard" class="btn btn-example mb-2">
-                      <i class="bi bi-eye me-2"></i>Voir le site
+                    <router-link to="/templates/standard" class="btn btn-primary">
+                      <i class="bi bi-eye me-2"></i>Voir les templates
                     </router-link>
-                    <button @click="toggleForm('standard')" class="btn btn-primary">
-                      {{ activeForm === 'standard' ? 'Masquer le formulaire' : 'Remplir le formulaire' }}
-                    </button>
                   </div>
                 </div>
               </div>
@@ -108,92 +102,11 @@
                     <li>✅ Support & modifications pendant 1 mois</li>
                   </ul>
                   <div class="offre-footer">
-                    <router-link to="/templates/premium" class="btn btn-example mb-2">
-                      <i class="bi bi-eye me-2"></i>Voir le site
+                    <router-link to="/templates/premium" class="btn btn-primary">
+                      <i class="bi bi-eye me-2"></i>Voir les templates
                     </router-link>
-                    <button @click="toggleForm('premium')" class="btn btn-primary">
-                      {{ activeForm === 'premium' ? 'Masquer le formulaire' : 'Remplir le formulaire' }}
-                    </button>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Formulaires -->
-          <div class="formulaires-container">
-            <!-- Formulaire Essentiel -->
-            <div v-show="activeForm === 'essentiel'" class="formulaire-wrapper" data-aos="fade-up">
-              <h3 class="form-title">📋 Formulaire - Formule Essentiel</h3>
-              <p class="form-subtitle">Remplissez ce formulaire pour votre site mémorial</p>
-              <p class="text-muted mb-4">
-                <strong>Contact :</strong> 
-                <a href="https://wa.me/243991683269" target="_blank" class="text-primary">WhatsApp +243 991 683 269</a> | 
-                <a href="mailto:imdigitallabs@gmail.com" class="text-primary">imdigitallabs@gmail.com</a>
-              </p>
-              <p class="alert alert-info">
-                <strong>Note :</strong> Ce formulaire est un aperçu. Pour remplir le formulaire complet, veuillez nous contacter directement.
-              </p>
-              <div class="form-preview">
-                <p><strong>Formulaire complet disponible sur demande</strong></p>
-                <p>Le formulaire inclut : Informations personnelles, Informations familiales, Biographie, Obsèques, Photos, et Contact.</p>
-                <p class="mt-3">
-                  <a href="https://wa.me/243991683269?text=Bonjour,%20je%20suis%20intéressé%20par%20la%20formule%20ESSENTIEL" 
-                     target="_blank" 
-                     class="btn btn-success">
-                    📱 Contacter pour le formulaire complet
-                  </a>
-                </p>
-              </div>
-            </div>
-
-            <!-- Formulaire Standard -->
-            <div v-show="activeForm === 'standard'" class="formulaire-wrapper" data-aos="fade-up">
-              <h3 class="form-title">📋 Formulaire - Formule Standard ⭐</h3>
-              <p class="form-subtitle">Remplissez ce formulaire pour votre site mémorial</p>
-              <p class="text-muted mb-4">
-                <strong>Contact :</strong> 
-                <a href="https://wa.me/243991683269" target="_blank" class="text-primary">WhatsApp +243 991 683 269</a> | 
-                <a href="mailto:imdigitallabs@gmail.com" class="text-primary">imdigitallabs@gmail.com</a>
-              </p>
-              <p class="alert alert-info">
-                <strong>Note :</strong> Ce formulaire est un aperçu. Pour remplir le formulaire complet, veuillez nous contacter directement.
-              </p>
-              <div class="form-preview">
-                <p><strong>Formulaire complet disponible sur demande</strong></p>
-                <p>Le formulaire inclut : Informations personnelles, Informations familiales, Biographie détaillée, Obsèques, Photos (jusqu'à 30), Vidéos, Témoignages, Citations/Versets, Design, et Contact.</p>
-                <p class="mt-3">
-                  <a href="https://wa.me/243991683269?text=Bonjour,%20je%20suis%20intéressé%20par%20la%20formule%20STANDARD" 
-                     target="_blank" 
-                     class="btn btn-success">
-                    📱 Contacter pour le formulaire complet
-                  </a>
-                </p>
-              </div>
-            </div>
-
-            <!-- Formulaire Premium -->
-            <div v-show="activeForm === 'premium'" class="formulaire-wrapper" data-aos="fade-up">
-              <h3 class="form-title">📋 Formulaire - Formule Premium 💎</h3>
-              <p class="form-subtitle">Remplissez ce formulaire pour votre site mémorial</p>
-              <p class="text-muted mb-4">
-                <strong>Contact :</strong> 
-                <a href="https://wa.me/243991683269" target="_blank" class="text-primary">WhatsApp +243 991 683 269</a> | 
-                <a href="mailto:imdigitallabs@gmail.com" class="text-primary">imdigitallabs@gmail.com</a>
-              </p>
-              <p class="alert alert-info">
-                <strong>Note :</strong> Ce formulaire est un aperçu. Pour remplir le formulaire complet, veuillez nous contacter directement.
-              </p>
-              <div class="form-preview">
-                <p><strong>Formulaire complet disponible sur demande</strong></p>
-                <p>Le formulaire inclut : Informations personnelles complètes, Informations familiales détaillées, Biographie complète, Obsèques, Photos illimitées, Vidéos illimitées, Témoignages multiples, Poèmes, Éléments spirituels/culturels, Design personnalisé, et Contact.</p>
-                <p class="mt-3">
-                  <a href="https://wa.me/243991683269?text=Bonjour,%20je%20suis%20intéressé%20par%20la%20formule%20PREMIUM" 
-                     target="_blank" 
-                     class="btn btn-success">
-                    📱 Contacter pour le formulaire complet
-                  </a>
-                </p>
               </div>
             </div>
           </div>
@@ -215,33 +128,12 @@ export default {
   },
   data() {
     return {
-      activeForm: null
     }
   },
   mounted() {
     this.initAOS()
   },
   methods: {
-    toggleForm(formule) {
-      if (this.activeForm === formule) {
-        this.activeForm = null
-      } else {
-        this.activeForm = formule
-        // Scroll vers le formulaire après un court délai
-        this.$nextTick(() => {
-          setTimeout(() => {
-            const formulairesContainer = document.querySelector('.formulaires-container')
-            if (formulairesContainer) {
-              formulairesContainer.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }
-          }, 300)
-        })
-      }
-    },
-    handleSubmit() {
-      // Logique de soumission si nécessaire
-      console.log('Formulaire soumis')
-    },
     initAOS() {
       if (window.AOS) {
         window.AOS.init({
@@ -411,9 +303,6 @@ export default {
   text-align: center;
   padding-top: 20px;
   border-top: 2px solid #f0f0f0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .btn-example {
@@ -465,70 +354,25 @@ export default {
   box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }
 
-.formulaires-container {
-  margin-top: 60px;
+.text-muted {
+  color: #6c757d;
+  font-size: 0.875rem;
 }
 
-.formulaire-wrapper {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  margin-bottom: 30px;
+.info-text {
+  color: #495057;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
 }
 
-.form-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--heading-color, #333);
-  margin-bottom: 10px;
-}
-
-.form-subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.form-preview {
-  padding: 30px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  border-left: 4px solid var(--accent-color, #d4af37);
-}
-
-.form-preview p {
-  margin-bottom: 15px;
-  line-height: 1.8;
-}
-
-.btn-success {
-  background-color: #25D366;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-  transition: all 0.3s;
-  border: none;
-}
-
-.btn-success:hover {
-  background-color: #20ba5a;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-  color: white;
-}
-
-.text-primary {
-  color: #2c2c2c !important;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.text-primary:hover {
-  text-decoration: underline;
+.info-text i {
+  color: var(--accent-color, #d4af37);
+  font-size: 1rem;
 }
 
 
@@ -543,10 +387,6 @@ export default {
   
   .offre-header h3 {
     font-size: 1.5rem;
-  }
-  
-  .formulaire-wrapper {
-    padding: 20px;
   }
 }
 </style>

@@ -14,7 +14,55 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="section-title">
             <h2>Nos Formules</h2>
-            <p>Sélectionnez votre formule pour accéder au questionnaire correspondant</p>
+            <p>Choisissez votre formule, découvrez les templates disponibles, puis commandez et payez pour recevoir votre formulaire personnalisé</p>
+          </div>
+
+          <!-- Note explicative du processus -->
+          <div class="process-note" data-aos="fade-up" data-aos-delay="50">
+            <div class="process-card">
+              <div class="process-header">
+                <i class="bi bi-shield-check"></i>
+                <h4>📋 Comment ça marche ?</h4>
+              </div>
+              <div class="process-steps">
+                <div class="step">
+                  <span class="step-number">1</span>
+                  <span class="step-text">Choisissez votre formule</span>
+                </div>
+                <div class="step-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="step">
+                  <span class="step-number">2</span>
+                  <span class="step-text">Découvrez les templates</span>
+                </div>
+                <div class="step-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="step">
+                  <span class="step-number">3</span>
+                  <span class="step-text">Commande & Paiement</span>
+                </div>
+                <div class="step-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="step">
+                  <span class="step-number">4</span>
+                  <span class="step-text">Recevez le formulaire</span>
+                </div>
+                <div class="step-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="step">
+                  <span class="step-number">5</span>
+                  <span class="step-text">Site créé & livré</span>
+                </div>
+              </div>
+              <div class="process-note-bottom">
+                <i class="bi bi-envelope-check me-2"></i>
+                <span><strong>Le formulaire Google vous sera envoyé par email/WhatsApp immédiatement après validation de votre paiement.</strong></span>
+              </div>
+            </div>
           </div>
 
           <div class="row gy-4">
@@ -38,8 +86,8 @@
                     <li>✅ Site responsive</li>
                   </ul>
                   <div class="formule-footer">
-                    <router-link to="/questionnaire-essentiel" class="btn btn-primary">
-                      Remplir le formulaire
+                    <router-link to="/templates/essentiel" class="btn btn-primary">
+                      <i class="bi bi-eye me-2"></i>Voir les templates
                     </router-link>
                   </div>
                 </div>
@@ -67,12 +115,9 @@
                     <li>✅ Personnalisation couleurs</li>
                   </ul>
                   <div class="formule-footer">
-                    <button class="btn btn-primary" disabled>
-                      Formulaire à venir
-                    </button>
-                    <small class="text-muted d-block mt-2">
-                      Disponible prochainement
-                    </small>
+                    <router-link to="/templates/standard" class="btn btn-primary">
+                      <i class="bi bi-eye me-2"></i>Voir les templates
+                    </router-link>
                   </div>
                 </div>
               </div>
@@ -100,12 +145,9 @@
                     <li>✅ Support 1 mois</li>
                   </ul>
                   <div class="formule-footer">
-                    <button class="btn btn-primary" disabled>
-                      Formulaire à venir
-                    </button>
-                    <small class="text-muted d-block mt-2">
-                      Disponible prochainement
-                    </small>
+                    <router-link to="/templates/premium" class="btn btn-primary">
+                      <i class="bi bi-eye me-2"></i>Voir les templates
+                    </router-link>
                   </div>
                 </div>
               </div>
@@ -379,6 +421,165 @@ export default {
 
 .contact-info a:hover {
   text-decoration: underline;
+}
+
+.process-note {
+  margin-bottom: 40px;
+}
+
+.process-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+}
+
+.process-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.process-header i {
+  font-size: 1.8rem;
+  color: var(--accent-color, #d4af37);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.process-card h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 110px;
+}
+
+.step-number {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  color: #667eea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s;
+}
+
+.step:hover .step-number {
+  transform: scale(1.1);
+}
+
+.step-text {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.step-arrow {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.step-arrow i {
+  display: block;
+}
+
+.process-note-bottom {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.process-note-bottom i {
+  font-size: 1.3rem;
+  color: var(--accent-color, #d4af37);
+}
+
+.process-note-bottom span {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.text-muted {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.info-text {
+  color: #495057;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.info-text i {
+  color: var(--accent-color, #d4af37);
+  font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+  .process-steps {
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .step {
+    min-width: 90px;
+  }
+
+  .step-arrow {
+    transform: rotate(90deg);
+  }
+
+  .process-card {
+    padding: 25px;
+  }
+
+  .process-note-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 768px) {
