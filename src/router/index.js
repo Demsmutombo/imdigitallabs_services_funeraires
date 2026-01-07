@@ -5,9 +5,6 @@ import Temoignage from '../views/Temoignage.vue'
 import QuestionnaireEssentiel from '../views/QuestionnaireEssentiel.vue'
 import Questionnaires from '../views/Questionnaires.vue'
 import Templates from '../views/Templates.vue'
-import FormulaireEssentiel from '../views/FormulaireEssentiel.vue'
-import FormulaireStandard from '../views/FormulaireStandard.vue'
-import FormulairePremium from '../views/FormulairePremium.vue'
 
 const routes = [
   {
@@ -34,21 +31,6 @@ const routes = [
     path: '/questionnaire-essentiel',
     name: 'QuestionnaireEssentiel',
     component: QuestionnaireEssentiel
-  },
-  {
-    path: '/formulaire-essentiel',
-    name: 'FormulaireEssentiel',
-    component: FormulaireEssentiel
-  },
-  {
-    path: '/formulaire-standard',
-    name: 'FormulaireStandard',
-    component: FormulaireStandard
-  },
-  {
-    path: '/formulaire-premium',
-    name: 'FormulairePremium',
-    component: FormulairePremium
   },
   {
     path: '/templates/:type?',

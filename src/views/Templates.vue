@@ -354,16 +354,17 @@ export default {
       // Créer le message WhatsApp amélioré
       const templateTypeLabel = this.getTemplateTypeLabel(template.id)
       const message = encodeURIComponent(
-        `Bonjour 👋\n\n` +
-        `Je souhaite commander un site mémorial avec le template suivant :\n\n` +
+        `Bonjour 👋\n` +
+        `Je souhaite commander un site mémorial auprès de IM Digital Labs avec le template suivant :\n\n` +
         `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-        `📋 *Template sélectionné :*\n${template.name}\n\n` +
-        `📦 *Formule :* ${templateTypeLabel}\n\n` +
-        `💰 *Prix :* ${template.price}\n\n` +
-        `🔗 *Aperçu :* ${template.externalUrl}\n` +
+        `📋 Template sélectionné : ${template.name}\n` +
+        `📦 Formule : ${templateTypeLabel}\n` +
+        `💰 Prix : ${template.price}\n` +
+        `🔗 Aperçu : ${template.externalUrl}\n\n` +
         `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
-        `Je serais ravi(e) de discuter des détails et de la personnalisation avec vous.\n\n` +
-        `Merci de me recontacter au plus vite. 🙏`
+        `Je souhaite être contacté(e) afin de confirmer le paiement de l'acompte (50%) et recevoir le formulaire à remplir pour la création du site.\n\n` +
+        `Merci de me recontacter dans les plus brefs délais. 🙏\n` +
+        `IM Digital Labs`
       )
       
       // Ouvrir WhatsApp avec le message pré-rempli
